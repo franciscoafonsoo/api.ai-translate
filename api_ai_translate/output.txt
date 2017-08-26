@@ -1,121 +1,79 @@
-cancel.abort
-cancel.stop
-cancel.exit
-cancel.cancel
-controllers-list.controller
-controllers-list.show me my 
-controllers-list.show my 
-controllers-list.what are my 
-controllers-list.list 
-controllers-list.my 
-debug-bot.debug bot
-demonstration-cancel.exit demonstration
-demonstration-cancel.exit demo
-demonstration-cancel.cancel demo
-demonstration-cancel.stop demo
-demonstration-cancel.cancel demonstration
-demonstration-cancel.stop demonstration
-demonstration-start.start demo
-demonstration-start.start demonstration
-demonstration-start.play
-demonstration-start.learn
-demonstration-start.i want to learn
-gardens-add-controller.assign controller
-gardens-add-controller.add 
-gardens-add.add garden
-gardens-add.add garden 
-gardens-list-controllers.list controllers from 
-gardens-list.my 
-gardens-list.list gardens in 
-gardens-list.list gardens
-gardens-list.show gardens
-getInfo.get info
-getInfo.show me info
-getInfo.show me info about 
-help-yes.what can I do
-help-yes.help me
-help-yes.yes
-help-yes.do it
-help-yes.sure
-help-yes.exactly
-help-yes.confirm
-help-yes.of course
-help-yes.sounds good
-help-yes.that's correct
-help-yes.I don't mind
-help-yes.I agree
-help.what can you do?
-help.what can I ask you?
-help.don't know what to do
-help.can you help me?
-help.I need help
-help.help me
-help.help
-irrigation-add.add irrigation cycle
-irrigation-add.add irrigation
-irrigation-add.add irrigation cycle to 
-irrigation-add.add irrigation on
-show map.map
-show map.show map
-signup-1-signup.I want to signup
-signup-1-signup.register
-signup-1-signup.sign up
-signup-1-signup.signup
-signup-1-signup.i want to register
-signup-1-yes.yes
-signup-1-yes.do it
-signup-1-yes.sure
-signup-1-yes.exactly
-signup-1-yes.confirm
-signup-1-yes.of course
-signup-1-yes.sounds good
-signup-1-yes.that's correct
-signup-1-yes.I don't mind
-signup-1-yes.I agree
-signup-2-controller.my controller id is 
-signup-2-controller.controllerId
-signup-2-controller.controller number is 
-signup-3-email.my email is 
-signup-3-email.eMailAddress
-signup-4-yes.yes
-signup-4-yes.do it
-signup-4-yes.sure
-signup-4-yes.exactly
-signup-4-yes.confirm
-signup-4-yes.of course
-signup-4-yes.sounds good
-signup-4-yes.that's correct
-signup-4-yes.I don't mind
-signup-4-yes.I agree
-testAPI.test 
-unknown-user-id - no.no
-unknown-user-id - no.don't do it
-unknown-user-id - no.definitely not
-unknown-user-id - no.not really
-unknown-user-id - no.thanks but no
-unknown-user-id - no.not interested
-unknown-user-id - no.I don't think so
-unknown-user-id - no.I disagree
-unknown-user-id - no.I don't want that
-unknown-user-id - yes.yes
-unknown-user-id - yes.do it
-unknown-user-id - yes.sure
-unknown-user-id - yes.exactly
-unknown-user-id - yes.confirm
-unknown-user-id - yes.of course
-unknown-user-id - yes.sounds good
-unknown-user-id - yes.that's correct
-unknown-user-id - yes.I don't mind
-unknown-user-id - yes.I agree
-welcome-6-repeat.no
-welcome-6-repeat.don't do it
-welcome-6-repeat.definitely not
-welcome-6-repeat.not really
-welcome-6-repeat.thanks but no
-welcome-6-repeat.not interested
-welcome-6-repeat.I don't think so
-welcome-6-repeat.I disagree
-welcome-6-repeat.I don't want that
-welcome-event.Start
-welcome-event.Get started
-welcome-event.welcome event
+what are my= o que e o meu
+of course= claro
+add garden= adicionar jardim
+cancel demo= cancelar demo
+cancel= cancelar
+add= adicionar
+do it= forca
+add irrigation=adicionar irrigação
+stop demonstration= parar demonstracao
+exit= sair
+controller number is= o numero do controlador e
+not really= nem por isso
+stop= para
+what can I ask you?= o que posso perguntar-te ?
+show me my= mostra-me o meu
+add irrigation cycle to= adicionar ciclo de irrigacao a
+i want to register=
+definitely not=
+learn=
+controllerId=
+exactly=
+controller=
+start demo=
+confirm=
+eMailAddress=
+Start=
+that's correct=
+I don't think so=
+show me info=
+list=
+I don't mind=
+what can you do?=
+not interested=
+Get started=
+I disagree=
+abort=
+no=
+I want to signup=
+help=
+debug bot=
+start demonstration=
+don't know what to do=
+list gardens in=
+signup=
+my controller id is=
+show me info about=
+list controllers from=
+play=
+i want to learn=
+I need help=
+thanks but no=
+what can I do=
+exit demonstration=
+can you help me?=
+add irrigation cycle=
+map=
+help me=
+exit demo=
+yes=
+show map=
+get info=
+I don't want that=
+sure=
+test=
+add irrigation on=
+show gardens=
+register=
+my email is=
+show my=
+cancel demonstration=
+welcome event=
+my=
+list gardens=
+don't do it=
+sounds good=
+I agree=
+assign controller=
+sign up=
+stop demo=

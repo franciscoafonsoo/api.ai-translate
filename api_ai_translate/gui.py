@@ -14,7 +14,7 @@ from pyforms.Controls import ControlButton
 import pyforms
 
 from api_ai_translate.parser import load_jsons   as load
-from api_ai_translate.build import build_file  as build
+from api_ai_translate.build import output_file  as build
 from api_ai_translate.intent import search_cases as search
 
 

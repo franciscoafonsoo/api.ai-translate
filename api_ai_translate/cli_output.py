@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 from pprint import pprint
 from api_ai_translate.parser import load_jsons   as load
-from api_ai_translate.build import build_file  as build
+from api_ai_translate.build import output_file  as output
+from api_ai_translate.build import input_file  as input
 from api_ai_translate.intent import search_cases as search
 
 from pysettings import conf
@@ -17,4 +18,5 @@ if __name__ == '__main__':
 
     intents = load(conf.DEFAULT_INTENTS_PATH)
 
-    build(intents)
+    # output(intents)
+    input()
