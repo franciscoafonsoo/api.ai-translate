@@ -1,7 +1,7 @@
-API.AI Graphviz
+API.AI Translate
 ===============
 
-Render graphs based on API.AI intents.
+Translate API.AI agents.
 
 Pre-Conditions
 --------------
@@ -12,7 +12,6 @@ For simplicity, you should name intents that relate to each other by name. Examp
 
 Based on:
 ---------
-- graphviz_ - Graph Visualization Tools
 - pyforms_ - Python layer of Windows forms, based on PyQT and OpenGL
 - pysettings_ - Python library to provide settings files for modular applications
 - `Sample Module Repository`_ - example repo for Python projects.
