@@ -28,6 +28,8 @@ class Intent:
 
         self.speech = a.get('responses')[0].get('messages')[0].get('speech')
 
+        self.old = dict()
+
         self.fallback = a.get('fallbackIntent')
 
     def __str__(self):
@@ -84,5 +86,5 @@ def replace_intents(lintents, load):
     for index, intent in enumerate(lintents):
         for dex, usersays in enumerate(intent.usersays):
             if usersays in load:
-                intent.usersays[dex] = load[usersays]
+                intent.old = load
     return lintents
