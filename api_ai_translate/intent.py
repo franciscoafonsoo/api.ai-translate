@@ -78,3 +78,11 @@ def search_cases(lintents):
                 group[context].append(intent)
 
     return group
+
+
+def replace_intents(lintents, load):
+    for index, intent in enumerate(lintents):
+        for dex, usersays in enumerate(intent.usersays):
+            if usersays in load:
+                intent.usersays[dex] = load[usersays]
+    return lintents

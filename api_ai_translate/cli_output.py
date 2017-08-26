@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 from pprint import pprint
 from api_ai_translate.parser import load_jsons   as load
-from api_ai_translate.build import output_file  as output
-from api_ai_translate.build import input_file  as input
-from api_ai_translate.intent import search_cases as search
+from api_ai_translate.parser import translate_jsons as dump
+from api_ai_translate.build import output_file
+from api_ai_translate.build import input_file
 
 from pysettings import conf
 
@@ -18,5 +18,10 @@ if __name__ == '__main__':
 
     intents = load(conf.DEFAULT_INTENTS_PATH)
 
-    # output(intents)
-    input()
+    choice = int(input('output(1) or input(2) ?'))
+
+    if choice == 1:
+        output_file(intents)
+    elif choice == 2:
+        intents = input_file(intents)
+        dump(conf.DEFAULT_INTENTS_PATH, intents)

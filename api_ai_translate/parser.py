@@ -21,3 +21,17 @@ def load_jsons(path):
             data[filename] = json.load(data_file)
 
     return [Intent(value) for keys, value in data.items()]
+
+
+def translate_jsons(path, lintents):
+    data = dict()
+
+    for i, filename in enumerate(os.listdir(path)):
+        with open(path + '/' + filename, encoding="utf-8") as data_file:
+            data[filename] = json.load(data_file)
+
+    for f in data:
+        for intent in lintents:
+            if intent.name in f:
+                data[f]['userSays'][0]['data'][0]['text'] = intent.usersays
+                print(data)

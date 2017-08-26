@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
-output = set()
-cenas = dict()
+from api_ai_translate.parser import translate_jsons
+from api_ai_translate.intent import replace_intents
 
 
 def output_file(lintents):
@@ -11,27 +11,31 @@ def output_file(lintents):
     :type lintents: list
     :param lintents: list of all intents
     """
-
+    dump = set()
     for index, i in enumerate(lintents):
         for endex, e in enumerate(i.usersays):
             e = e.strip()
-            output.add(e)
+            dump.add(e)
 
     with open(file='output.txt', mode='w+', encoding='utf-8') as out:
-        for index, i in enumerate(output):
+        for index, i in enumerate(dump):
             out.write(str(i) + '=\r\n')
 
 
-def input_file():
+def input_file(lintents):
+    """
+    Load a file with all User Says and Speech based on the file created by api_ai_translate.build.output_file
 
-    with open(file='output.txt', mode='r+', encoding='utf-8') as file:
-        for line in file:
-            before = line.split('=')[0]
-            after = line.split('=')[1]
-            before = before.strip()
-            after = after.strip()
+    :type lintents: list
+    :param lintents: list of all intents
+    """
+
+    load = dict()
+    with open(file='output.txt', mode='r+', encoding='utf-8') as f:
+        for line in f:
+            before, after = line.split('=')
+            before, after = before.strip(), after.strip()
             if line and after:
-                cenas[before] = after
-                output.add(before)
+                load[before] = after
 
-    print (cenas)
+    return replace_intents(lintents, load)
