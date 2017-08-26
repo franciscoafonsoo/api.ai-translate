@@ -1,0 +1,102 @@
+{
+  "userSays": [
+    {
+      "id": "04321284-b69a-4244-9845-ac5fac9ba99c",
+      "data": [
+        {
+          "text": "Carlos",
+          "alias": "userFirstName",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " is my name"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fc7fea31-31a4-4c57-b23f-2098b1a264fa",
+      "data": [
+        {
+          "text": "I am "
+        },
+        {
+          "text": "Carlos",
+          "alias": "userFirstName",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "74adccbb-c11c-4237-8fea-97ba34207da4",
+      "data": [
+        {
+          "text": "Carlos",
+          "alias": "userFirstName",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "8347aaab-0514-4c0d-bca8-6c28fee9ed2f",
+  "name": "welcome-3-first-name",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-3-first-name"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "welcome-first-name",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-3-first-name",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-4-last-name",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "userFirstName",
+          "value": "$userFirstName",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Hi $userFirstName. Can you also tell me your last name?"
+        }
+      ],
+      "defaultResponsePlatforms": [
+        "facebook"
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

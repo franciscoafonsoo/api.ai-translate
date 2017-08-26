@@ -1,0 +1,15 @@
+{
+  "id": "e275449f-7b0f-4f2c-8a09-aa02c3aa9341",
+  "name": "garden",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "garden",
+      "synonyms": [
+        "garden"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

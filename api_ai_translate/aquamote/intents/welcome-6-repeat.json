@@ -1,0 +1,138 @@
+{
+  "userSays": [
+    {
+      "id": "a01ffe5f-4a6e-4144-a8e4-f3bb0f0115fb",
+      "data": [
+        {
+          "text": "no"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f754930c-a1d0-4b64-ae4a-6efd989ffee6",
+      "data": [
+        {
+          "text": "don\u0027t do it"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c0328fcf-b9be-4b9b-a1ed-5b34cfc119be",
+      "data": [
+        {
+          "text": "definitely not"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "25593e7e-9b8b-414d-8e80-92dd6619247f",
+      "data": [
+        {
+          "text": "not really"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "535290b3-88f1-4a4b-9f23-3ca42ea0e040",
+      "data": [
+        {
+          "text": "thanks but no"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3a643634-9cbf-4ac8-b813-c555e04a8cbd",
+      "data": [
+        {
+          "text": "not interested"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f6b6920e-668b-4982-9651-1dd2b3213f88",
+      "data": [
+        {
+          "text": "I don\u0027t think so"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bece4ee1-da70-4ef2-a67f-6a853fa125e9",
+      "data": [
+        {
+          "text": "I disagree"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a48131d9-68d7-4328-bb5e-b612b249cc0d",
+      "data": [
+        {
+          "text": "I don\u0027t want that"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "4da4eeae-e8e5-4615-a830-bc80032799c2",
+  "parentId": "bf17d4ad-18d2-488b-942e-5be51b298ae4",
+  "rootParentId": "bf17d4ad-18d2-488b-942e-5be51b298ae4",
+  "name": "welcome-6-repeat",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-6-correct"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "welcome-51-email-valid.welcome-51-email-valid-no",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-6-correct",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-3-first-name",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Ok, let\u0027s try again. Can you tell me your first name please?"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

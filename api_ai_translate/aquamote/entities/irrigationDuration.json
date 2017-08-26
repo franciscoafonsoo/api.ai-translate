@@ -1,0 +1,81 @@
+{
+  "id": "15848f9a-3429-46c7-a80d-5ffd5bd4e767",
+  "name": "irrigationDuration",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "10",
+      "synonyms": [
+        "10",
+        "10m",
+        "10 minutes"
+      ]
+    },
+    {
+      "value": "5",
+      "synonyms": [
+        "5",
+        "5m",
+        "5 minutes"
+      ]
+    },
+    {
+      "value": "15",
+      "synonyms": [
+        "15",
+        "15m",
+        "15 minutes"
+      ]
+    },
+    {
+      "value": "20",
+      "synonyms": [
+        "20",
+        "20m",
+        "20 minutes"
+      ]
+    },
+    {
+      "value": "25",
+      "synonyms": [
+        "25",
+        "25m",
+        "25 minutes"
+      ]
+    },
+    {
+      "value": "30",
+      "synonyms": [
+        "30",
+        "30m",
+        "30 minutes"
+      ]
+    },
+    {
+      "value": "35",
+      "synonyms": [
+        "35",
+        "35m",
+        "35 minutes"
+      ]
+    },
+    {
+      "value": "40",
+      "synonyms": [
+        "40",
+        "40m",
+        "40 minutes"
+      ]
+    },
+    {
+      "value": "45",
+      "synonyms": [
+        "45",
+        "45m",
+        "45 minutes"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

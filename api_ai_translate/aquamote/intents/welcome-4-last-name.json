@@ -1,0 +1,101 @@
+{
+  "userSays": [
+    {
+      "id": "fa209299-805d-45bb-b3d0-f63ba494eb07",
+      "data": [
+        {
+          "text": "Smith",
+          "alias": "userLastName",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " is my last name"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "118a6035-f157-453c-bb45-d231b068918c",
+      "data": [
+        {
+          "text": "my last name is "
+        },
+        {
+          "text": "Smith",
+          "alias": "userLastName",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2baab577-dfb9-4589-8eb7-b4ffa378d23d",
+      "data": [
+        {
+          "text": "Smith",
+          "alias": "userLastName",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "8c002ffc-3459-4c5e-a601-8830606b21af",
+  "name": "welcome-4-last-name",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-4-last-name"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "welcome-4-last-name",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-5-email-followup",
+          "parameters": {},
+          "lifespan": 2
+        },
+        {
+          "name": "welcome-4-last-name",
+          "parameters": {},
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@sys.any",
+          "name": "userLastName",
+          "value": "$userLastName",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "To conclude, please provide your e-mail."
+        }
+      ],
+      "defaultResponsePlatforms": [
+        "facebook"
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

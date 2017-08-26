@@ -1,0 +1,17 @@
+{
+  "id": "91457dcf-1607-4f16-b638-34f8af38e90f",
+  "name": "controller",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "controller",
+      "synonyms": [
+        "controller",
+        "aquamote",
+        "box"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Aquamote in English",
+  "language": "en",
+  "enabledDomainFeatures": [
+    "smalltalk-domain-on",
+    "smalltalk-fulfillment-on"
+  ],
+  "googleAssistant": {
+    "googleAssistantCompatible": false,
+    "project": "aquamote-en",
+    "welcomeIntentSignInRequired": false,
+    "startIntents": [],
+    "systemIntents": [],
+    "endIntentIds": [],
+    "oAuthLinking": {
+      "required": false,
+      "grantType": "AUTH_CODE_GRANT"
+    },
+    "voiceType": "MALE_1",
+    "capabilities": [],
+    "protocolVersion": "V2"
+  },
+  "defaultTimezone": "Africa/Casablanca",
+  "webhook": {
+    "url": "https://aquamote.greenbyweb.eu/sri-bot/rest/v1/api.ai/",
+    "username": "apiaiuser",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "": ""
+    },
+    "available": true,
+    "useForDomains": false
+  },
+  "isPrivate": true,
+  "customClassifierMode": "use.after",
+  "mlMinConfidence": 0.3
+}

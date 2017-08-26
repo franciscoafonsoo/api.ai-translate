@@ -1,0 +1,45 @@
+{
+  "userSays": [],
+  "id": "1c959d9c-9588-4196-a67a-0d0de8951030",
+  "name": "welcome-0-start-fallback",
+  "auto": false,
+  "contexts": [
+    "welcome-0-start-followup",
+    "signup-data"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "welcome-0-start-fallback",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 2
+        },
+        {
+          "name": "welcome-0-start-followup",
+          "parameters": {},
+          "lifespan": 2
+        },
+        {
+          "name": "welcome-followup",
+          "parameters": {},
+          "lifespan": 0
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Welcome! My name is AquamoteBot, nice to meet you!! I will ask you some questions so that we know each other better. Let\u0027s go? Please answer \u0027yes\u0027 or \u0027no\u0027."
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": []
+}

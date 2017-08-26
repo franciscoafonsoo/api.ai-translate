@@ -1,0 +1,126 @@
+{
+  "userSays": [
+    {
+      "id": "ac606201-560d-4558-8e59-d332ff4e07ab",
+      "data": [
+        {
+          "text": "register"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "da9fd36a-e107-435d-84ba-c672bb14b1e2",
+      "data": [
+        {
+          "text": "sign up"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9156874e-87f0-434e-b60f-826812b69ed8",
+      "data": [
+        {
+          "text": "signup"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "388f15c2-c5d5-4140-93d9-4d1fb9621b77",
+      "data": [
+        {
+          "text": "where do I start"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bca7cfab-95ba-47f7-9e94-8af7c109404d",
+      "data": [
+        {
+          "text": "how do I start"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "19ae9c91-7db2-4aac-bb93-4cf3a030a574",
+      "data": [
+        {
+          "text": "i want to register"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "adf714e8-8719-4626-b240-4b134c558db0",
+      "data": [
+        {
+          "text": "welcome"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "bc60e002-01c8-4fbc-b19a-bae03e63cb0f",
+  "name": "welcome-0-start",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "welcome-0-start",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-0-start-followup",
+          "parameters": {},
+          "lifespan": 2
+        },
+        {
+          "name": "welcome-0-start",
+          "parameters": {},
+          "lifespan": 0
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Welcome! My name is AquamoteBot, nice to meet you!! I will ask you some questions so that we know each other better. Let\u0027s go?"
+        }
+      ],
+      "defaultResponsePlatforms": [
+        "facebook"
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "FACEBOOK_WELCOME"
+    },
+    {
+      "name": "SLACK_WELCOME"
+    },
+    {
+      "name": "SKYPE_WELCOME"
+    }
+  ]
+}

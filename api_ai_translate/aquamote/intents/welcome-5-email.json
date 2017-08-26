@@ -1,0 +1,89 @@
+{
+  "userSays": [
+    {
+      "id": "de3ea4e2-b6a6-45a5-bcef-a96227e2ccd4",
+      "data": [
+        {
+          "text": "my email is "
+        },
+        {
+          "text": "example@google.com",
+          "alias": "userEmail",
+          "meta": "@sys.email",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a54f625b-5daa-4820-ac4b-d767a24c9d7e",
+      "data": [
+        {
+          "text": "example@google.com",
+          "alias": "userEmail",
+          "meta": "@sys.email",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "13fd2cbf-fc5e-47b0-84c6-28be7993a161",
+  "name": "welcome-5-email",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-5-email-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "EmailAvailable",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-last-name-followup",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-5-email-followup",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@sys.email",
+          "name": "userEmail",
+          "value": "$userEmail",
+          "prompts": [
+            "Please insert a valid e-mail"
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "For the moment, I am unable to verify your e-mail. Please try again later."
+        }
+      ],
+      "defaultResponsePlatforms": [
+        "facebook"
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

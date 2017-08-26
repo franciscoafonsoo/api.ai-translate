@@ -1,0 +1,21 @@
+{
+  "id": "004aaeb4-7f08-4130-ac55-2b58d5278afa",
+  "name": "entityType",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "@garden:garden ",
+      "synonyms": [
+        "@garden:garden "
+      ]
+    },
+    {
+      "value": "@controller:controller ",
+      "synonyms": [
+        "@controller:controller "
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": false
+}

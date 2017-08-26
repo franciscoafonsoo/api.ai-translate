@@ -1,0 +1,58 @@
+{
+  "userSays": [],
+  "id": "09087424-c9c8-4330-b874-7f42fae5157a",
+  "name": "welcome-2.1-controller-validated",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-controller-validated"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-invalid-controller",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-2-controllers",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-controller-validated",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-3-first-name",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Great! Your controller ID was successfully validated! Let\u0027s know each other better. Can you tell me your first name please?"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "CONTROLLER_VALIDATED"
+    }
+  ]
+}

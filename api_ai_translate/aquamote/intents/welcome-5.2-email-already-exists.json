@@ -1,0 +1,50 @@
+{
+  "userSays": [],
+  "id": "03f6d03d-2e08-43dc-ad80-35bc8276880e",
+  "name": "welcome-5.2-email-already-exists",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-email-already-exists",
+    "welcome-5-email-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "EmailAvailable",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-email-already-exists",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-5-email-followup",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Ups! This email is already in use. If you made a mistake, please try again."
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "EMAIL_ALREADY_EXISTS"
+    }
+  ]
+}

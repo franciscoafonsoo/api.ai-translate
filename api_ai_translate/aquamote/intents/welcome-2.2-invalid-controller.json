@@ -1,0 +1,50 @@
+{
+  "userSays": [],
+  "id": "1a4785bb-b2f0-4477-a49d-8d032b4381a9",
+  "name": "welcome-2.2-invalid-controller",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-invalid-controller",
+    "welcome-2-controllers"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "ControllerAvailable",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-invalid-controller",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-2-controllers",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Ups! This controller ID is not valid or is already registered. Please try again."
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "INVALID_CONTROLLER"
+    }
+  ]
+}

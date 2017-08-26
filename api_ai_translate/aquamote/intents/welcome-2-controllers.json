@@ -1,0 +1,85 @@
+{
+  "userSays": [
+    {
+      "id": "54497727-608d-434d-8d67-ddb2cff83c2b",
+      "data": [
+        {
+          "text": "4139f025-f2f3-4cb4-9e2e-6f0afde916c5",
+          "alias": "controllerId",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7da9f86a-958c-4a15-b4fb-fa879924147b",
+      "data": [
+        {
+          "text": "controller number is "
+        },
+        {
+          "text": "9c52df0d-ac5e-4e66-b7cc-2233c9b14617",
+          "alias": "controllerId",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "231303c0-1b61-4a39-a6cb-ff7814546ca2",
+  "name": "welcome-2-controllers",
+  "auto": true,
+  "contexts": [
+    "signup-data",
+    "welcome-2-controllers"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "ControllerAvailable",
+      "affectedContexts": [
+        {
+          "name": "signup-data",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "welcome-yes-followup",
+          "parameters": {},
+          "lifespan": 0
+        },
+        {
+          "name": "welcome-2-controllers",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@sys.any",
+          "name": "controllerId",
+          "value": "$controllerId",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "For the moment, I am unable to verify your controller ID. Please try again later."
+        }
+      ],
+      "defaultResponsePlatforms": [
+        "facebook"
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
