@@ -34,4 +34,5 @@ def translate_jsons(path, lintents):
         for intent in lintents:
             if intent.name in f:
                 data[f]['userSays'][0]['data'][0]['text'] = intent.usersays
-                print(data)
+                with open(path + '/' + 'trans_' + f, encoding="utf-8", mode='w+') as outfile:
+                    json.dump(data[f], outfile)
