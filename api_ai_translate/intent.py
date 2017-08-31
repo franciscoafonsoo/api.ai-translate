@@ -25,8 +25,6 @@ class Intent:
                 elif len(data) == 4:
                     self.reference.update(data)
 
-        print(self.reference)
-
         self.contextout = sorted([i.get('name') for i in a.get('responses')[0].get('affectedContexts')
                                   if not i.get('lifespan') == 0])
 
