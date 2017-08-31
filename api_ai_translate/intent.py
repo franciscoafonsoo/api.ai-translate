@@ -23,7 +23,7 @@ class Intent:
                     if not data.get('text') == ' ':
                         if trans:
                             self.usersays[data.get('text')] = \
-                                translator.translate(data.get('text'), src='en', dest='pt').text
+                                translator.translate(data.get('text'), src='en', dest=trans).text
                         else:
                             self.usersays[data.get('text')] = data.get('text')
                 elif len(data) == 4:
