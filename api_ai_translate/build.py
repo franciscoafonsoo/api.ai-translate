@@ -16,7 +16,8 @@ def output_file(lintents):
     reference = list()
 
     for i in lintents:
-        usersays.update(i.usersays)
+        if i.usersays:
+            usersays.update(i.usersays)
         if i.reference:
             reference.append(i.reference)
 
@@ -41,10 +42,7 @@ def input_file(lintents):
     """
 
     load = dict()
-    with open(file='output.txt', mode='r+', encoding='utf-8') as f:
-        for line in f:
-            before, after = line.split('=')
-            if line and after:
-                load[before] = after
+    with open(file='usersays.txt', mode='r+', encoding='utf-8') as f:
+        load = json.load(f)
 
     return replace_intents(lintents, load)

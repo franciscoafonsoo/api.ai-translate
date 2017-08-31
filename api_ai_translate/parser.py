@@ -5,9 +5,10 @@ import json
 from api_ai_translate.intent import Intent
 
 
-def load_jsons(path):
+def load_jsons(path, translate):
     """ Converts all JSON's given in path (inside 'intents) to a list of Intent Objects.
 
+    :param translate:
     :param path: intent directory extrated from API.AI
     :type path: str
     :return: list of Intent objects.
@@ -20,25 +21,20 @@ def load_jsons(path):
         with open(path + '/' + filename, encoding="utf-8") as data_file:
             data[filename] = json.load(data_file)
 
-    return [Intent(value) for keys, value in data.items()]
+    return [Intent(value, translate) for keys, value in data.items()]
 
 
 def translate_jsons(path, lintents):
-    data = dict()
 
-    for i, filename in enumerate(os.listdir(path)):
-        with open(path + '/' + filename, encoding="utf-8") as data_file:
-            data[filename] = json.load(data_file)
-
-    for f in data:
-        for intent in lintents:
-            if intent.name in f:
-                for index, i in enumerate(data[f]['userSays']):
-                    for dex, e in enumerate(intent.old):
-                        # magic happens here
-                        for ex, x in enumerate(i['data']):
-                            # se é só uma expressão para traduzão, len == 1
-                            if x['text'].rstrip() == e and len(x) == 1:
-                                x['text'] = intent.old[e]
-        with open(path + '/' + 'trans_' + f, encoding="utf-8", mode='w+') as outfile:
-            json.dump(data[f], outfile)
+    for intent in lintents:
+        for x in intent.old.get('userSays'):
+            for data in x.get('data'):
+                for key in intent.usersays:
+                    if len(data) == 1:
+                        print(intent.usersays)
+                        if not data.get('text') == ' ' and data.get('text') == key:
+                            data['text'] = intent.usersays[key]
+                    elif len(data) == 4:
+                        pass
+        with open(path + '/' + 'trans_' + intent.name, encoding="utf-8", mode='w+') as outfile:
+            json.dump(intent.old, outfile)

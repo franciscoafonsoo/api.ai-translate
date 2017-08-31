@@ -16,12 +16,12 @@ if __name__ == '__main__':
     if not conf.DEFAULT_INTENTS_PATH:
         raise Exception("Please define an intents path in the user_settings.py file")
 
-    intents = load(conf.DEFAULT_INTENTS_PATH)
-
     choice = int(input('output(1) or input(2) ?'))
 
     if choice == 1:
+        intents = load(conf.DEFAULT_INTENTS_PATH, True)
         output_file(intents)
     elif choice == 2:
+        intents = load(conf.DEFAULT_INTENTS_PATH, False)
         intents = input_file(intents)
         dump(conf.DEFAULT_INTENTS_PATH, intents)

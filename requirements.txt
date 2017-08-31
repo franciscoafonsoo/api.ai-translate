@@ -1,8 +1,5 @@
+googletrans
 nose
 sphinx
-graphviz
-numpy
-pyqt5
 https://bitbucket.org/fchampalimaud/logging-bootstrap/get/master.zip
 https://github.com/UmSenhorQualquer/pysettings/archive/master.zip
-https://github.com/UmSenhorQualquer/pyforms/archive/master.zip

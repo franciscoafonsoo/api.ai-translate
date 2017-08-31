@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 from collections import defaultdict
 from functools import reduce
+from googletrans import Translator
 
 
 class Intent:
-    def __init__(self, a):
+    def __init__(self, a, trans):
         """ Atributs for the Intent Object. Note: only using relevant atributes to build the graph
 
         :param a: json.load() from a file containting an intent
@@ -14,28 +15,24 @@ class Intent:
 
         self.name = a.get('name')
 
-        self.contextin = sorted(a.get('contexts'))
-
         self.usersays = dict()
         self.reference = dict()
+        translator = Translator()
+
         for x in a.get('userSays'):
             for data in x.get('data'):
                 if len(data) == 1:
-                    self.usersays[data.get('text')] = ''
+                    if not data.get('text') == ' ':
+                        if trans:
+                            self.usersays[data.get('text')] = \
+                                translator.translate(data.get('text'), src='en', dest='pt').text
+                        else:
+                            self.usersays[data.get('text')] = data.get('text')
                 elif len(data) == 4:
                     self.reference.update(data)
-
-        self.contextout = sorted([i.get('name') for i in a.get('responses')[0].get('affectedContexts')
-                                  if not i.get('lifespan') == 0])
-
-        # find user cases
-        self.usercase = (each for each in self.contextout)
-
         self.speech = a.get('responses')[0].get('messages')[0].get('speech')
 
-        self.old = dict()
-
-        self.fallback = a.get('fallbackIntent')
+        self.old = a
 
     def __str__(self):
         """
@@ -88,8 +85,9 @@ def search_cases(lintents):
 
 
 def replace_intents(lintents, load):
-    for index, intent in enumerate(lintents):
-        for dex, usersays in enumerate(intent.usersays):
-            if usersays in load:
-                intent.old = load
+    for key in load.keys():
+        for intent in lintents:
+            for usersays in intent.usersays:
+                if usersays == key:
+                    intent.usersays[usersays] = load[key]
     return lintents
