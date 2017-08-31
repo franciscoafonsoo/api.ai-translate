@@ -1,5 +1,6 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
+import json
 from api_ai_translate.parser import translate_jsons
 from api_ai_translate.intent import replace_intents
 
@@ -11,15 +12,24 @@ def output_file(lintents):
     :type lintents: list
     :param lintents: list of all intents
     """
-    dump = set()
-    for index, i in enumerate(lintents):
-        for endex, e in enumerate(i.usersays):
-            e = e.strip()
-            dump.add(e)
+    usersays = dict()
+    reference = list()
 
-    with open(file='output.txt', mode='w+', encoding='utf-8') as out:
-        for index, i in enumerate(dump):
-            out.write(str(i) + '=\r\n')
+    for i in lintents:
+        usersays.update(i.usersays)
+        if i.reference:
+            reference.append(i.reference)
+
+    reference = [dict(t) for t in set([tuple(d.items()) for d in reference])]
+
+    with open(file='usersays.txt', mode='w+', encoding='utf-8') as out:
+        json.dump(usersays, out)
+        # for index, i in enumerate(usersays):
+        #    out.write("'" + str(i) + "'=\r\n")
+    with open(file='reference.txt', mode='w+', encoding='utf-8') as out:
+        json.dump(reference, out)
+        # for endex, e in enumerate(reference):
+        # out.write(str(e) + '\r\n')
 
 
 def input_file(lintents):
@@ -34,7 +44,6 @@ def input_file(lintents):
     with open(file='output.txt', mode='r+', encoding='utf-8') as f:
         for line in f:
             before, after = line.split('=')
-            before, after = before.strip(), after.strip()
             if line and after:
                 load[before] = after
 

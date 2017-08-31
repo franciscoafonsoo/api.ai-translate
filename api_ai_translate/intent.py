@@ -16,9 +16,16 @@ class Intent:
 
         self.contextin = sorted(a.get('contexts'))
 
-        self.usersays = [x.get('data')[0] for x in a.get('userSays')]
+        self.usersays = dict()
+        self.reference = dict()
+        for x in a.get('userSays'):
+            for data in x.get('data'):
+                if len(data) == 1:
+                    self.usersays[data.get('text')] = ''
+                elif len(data) == 4:
+                    self.reference.update(data)
 
-        self.usersays = [x.get('text') if len(x) == 1 else x.get('alias') for x in self.usersays]
+        print(self.reference)
 
         self.contextout = sorted([i.get('name') for i in a.get('responses')[0].get('affectedContexts')
                                   if not i.get('lifespan') == 0])
