@@ -24,14 +24,18 @@ def load_jsons(path, translate):
     return [Intent(value, translate) for keys, value in data.items()]
 
 
-def translate_jsons(path, lintents):
+def rebuild_jsons(path, lintents):
+    """ Replace and output a list on Intents to valid API.AI JSON Files
+
+    :param path: path to output files
+    :param lintents: list of Intent objects
+    """
 
     for intent in lintents:
         for x in intent.old.get('userSays'):
             for data in x.get('data'):
                 for key in intent.usersays:
                     if len(data) == 1:
-                        print(intent.usersays)
                         if not data.get('text') == ' ' and data.get('text') == key:
                             data['text'] = intent.usersays[key]
                     elif len(data) == 4:

@@ -1,8 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
-from pprint import pprint
 from api_ai_translate.parser import load_jsons   as load
-from api_ai_translate.parser import translate_jsons as dump
+from api_ai_translate.parser import rebuild_jsons as dump
 from api_ai_translate.build import output_file
 from api_ai_translate.build import input_file
 

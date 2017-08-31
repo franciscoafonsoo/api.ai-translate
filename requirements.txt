@@ -1,5 +1,3 @@
 googletrans
-nose
-sphinx
 https://bitbucket.org/fchampalimaud/logging-bootstrap/get/master.zip
 https://github.com/UmSenhorQualquer/pysettings/archive/master.zip

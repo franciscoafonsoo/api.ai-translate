@@ -19,10 +19,9 @@ setup(
     url='https://github.com/franciscoafonsoo/api_ai_translate',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
-    install_requires=["nose", "sphinx", "graphviz", "numpy", "pyqt5"],
+    install_requires=["googletrans"],
     dependency_links=[
         "https://bitbucket.org/fchampalimaud/logging-bootstrap/get/master.zip",
-        "https://github.com/UmSenhorQualquer/pysettings/archive/master.zip",
-        "https://github.com/UmSenhorQualquer/pyforms/archive/master.zip"
+        "https://github.com/UmSenhorQualquer/pysettings/archive/master.zip"
     ],
 )

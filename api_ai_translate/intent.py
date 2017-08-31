@@ -1,7 +1,5 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
-from collections import defaultdict
-from functools import reduce
 from googletrans import Translator
 
 
@@ -40,48 +38,6 @@ class Intent:
         :rtype: str
         """
         return self.name
-
-    def __eq__(self, b):
-        """
-        first: All output contexts from 'b' also appear in 'a'
-        second: 'b' user says is not empty OR 'b' is a fallback intent
-
-        first AND second must be true.
-
-        :type   b:  object
-        :rtype   :  bool
-        :param  b:  Intent Object
-        """
-
-        first = self.contextin[:len(b.contextout)] == b.contextout
-        second = b.usersays or b.fallback
-
-        return first and second
-
-
-def search_cases(lintents):
-    """
-    Find 'User Cases' in the given intents. Returns a dict
-    with the following format : {'usercase': list of intents}.
-    If the intent doesn't have a usercase, it should be grouped
-    in with the 'empty' name
-
-    :param lintents: a list of intents
-    :type lintents: list
-    :return: defaultdict {'usercase': list of intents}
-    :rtype: defaultdict
-    """
-
-    group = defaultdict(list)
-
-    for index, intent in enumerate(lintents):
-        for context in intent.usercase:
-            if intent.usercase is '':
-                group['empty'].append(intent)
-            else:
-                group[context].append(intent)
-
-    return group
 
 
 def replace_intents(lintents, load):
