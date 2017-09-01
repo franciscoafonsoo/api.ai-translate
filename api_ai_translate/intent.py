@@ -1,5 +1,6 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
+import re
 from googletrans import Translator
 
 
@@ -15,6 +16,7 @@ class Intent:
 
         self.usersays = dict()
         self.reference = dict()
+        self.speech = dict()
         translator = Translator()
 
         for x in a.get('userSays'):
@@ -28,7 +30,21 @@ class Intent:
                             self.usersays[data.get('text')] = data.get('text')
                 elif len(data) == 4:
                     self.reference.update(data)
-        self.speech = a.get('responses')[0].get('messages')[0].get('speech')
+
+        speech = a.get('responses')[0].get('messages')[0].get('speech')
+
+        if trans:
+            if type(speech) is list:
+                for i in speech:
+                    if not re.match(r'.*[\%\$\^\*\@\!\_\-\(\)\:\;\'\"\{\}\[\]].*', i):
+                        self.speech[i] = translator.translate(i, src='en', dest=trans).text
+                    else:
+                        self.speech[i] = ''
+            else:
+                if not re.match(r'.*[\%\$\^\*\@\!\_\-\(\)\:\;\'\"\{\}\[\]].*', speech):
+                    self.speech[speech] = translator.translate(speech, src='en', dest=trans).text
+                else:
+                    self.speech[speech] = ''
 
         self.old = a
 

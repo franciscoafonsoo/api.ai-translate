@@ -11,6 +11,7 @@ def output_file(lintents):
     :type lintents: list
     :param lintents: list of all intents
     """
+    speech = dict()
     usersays = dict()
     reference = list()
 
@@ -19,6 +20,8 @@ def output_file(lintents):
             usersays.update(i.usersays)
         if i.reference:
             reference.append(i.reference)
+        if i.speech:
+            speech.update(i.speech)
 
     # clear duplicate entries
     reference = [dict(t) for t in set([tuple(d.items()) for d in reference])]
@@ -28,6 +31,9 @@ def output_file(lintents):
 
     with open(file='reference.txt', mode='w+', encoding='utf-8') as out:
         json.dump(reference, out)
+
+    with open(file='speech.txt', mode='w+', encoding='utf-8') as out:
+        json.dump(speech, out)
 
 
 def input_file(lintents):

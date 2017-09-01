@@ -19,8 +19,8 @@ if __name__ == '__main__':
 
     if choice == 1:
         print('Choose to what language you want to translate the agent (en, pt, etc)')
-        lan = str(input())
-        intents = load(conf.DEFAULT_INTENTS_PATH, lan)
+        # intents = load(conf.DEFAULT_INTENTS_PATH, False)
+        intents = load(conf.DEFAULT_INTENTS_PATH, str(input()))
         output_file(intents)
     elif choice == 2:
         intents = load(conf.DEFAULT_INTENTS_PATH, False)
