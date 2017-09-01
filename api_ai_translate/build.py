@@ -21,7 +21,9 @@ def output_file(lintents):
         if i.reference:
             reference.append(i.reference)
         if i.speech:
-            speech.update(i.speech)
+            for s in i.speech:
+                if s not in speech.keys():
+                    speech.update(i.speech)
 
     # clear duplicate entries
     reference = [dict(t) for t in set([tuple(d.items()) for d in reference])]

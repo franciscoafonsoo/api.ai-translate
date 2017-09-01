@@ -36,12 +36,12 @@ class Intent:
         if trans:
             if type(speech) is list:
                 for i in speech:
-                    if not re.match(r'.*[\%\$\^\*\@\!\_\-\(\)\:\;\'\"\{\}\[\]].*', i):
+                    if not re.match(r'.*[\%\$\^\*\@\_\-\(\)\:\;\'\"\{\}\[\]].*', i):
                         self.speech[i] = translator.translate(i, src='en', dest=trans).text
                     else:
                         self.speech[i] = ''
             else:
-                if not re.match(r'.*[\%\$\^\*\@\!\_\-\(\)\:\;\'\"\{\}\[\]].*', speech):
+                if not re.match(r'.*[\%\$\^\*\@\_\-\(\)\:\;\'\"\{\}\[\]].*', speech):
                     self.speech[speech] = translator.translate(speech, src='en', dest=trans).text
                 else:
                     self.speech[speech] = ''
