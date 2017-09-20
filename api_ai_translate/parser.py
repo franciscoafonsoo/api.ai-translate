@@ -39,5 +39,22 @@ def rebuild_jsons(path, lintents):
                             data['text'] = intent.usersays[key]
                     elif len(data) == 4:
                         pass
-        with open(path + '/' + 'trans_' + intent.name, encoding="utf-8", mode='w+') as outfile:
+
+        speech = intent.old.get('responses')[0].get('messages')[0].get('speech')
+
+        print("original: ")
+        print(speech)
+        print("new: ")
+        print(intent.speech)
+
+        for i in intent.speech:
+            if type(speech) is list:
+                for y in speech:
+                    if y == i:
+                        y = i
+            else:
+                if speech == i:
+                    y = i
+
+        with open(path + '/' + 'trans_' + intent.name + ".json", encoding="utf-8", mode='w+') as outfile:
             json.dump(intent.old, outfile)

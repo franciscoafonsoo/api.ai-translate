@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 import json
-from api_ai_translate.intent import replace_intents
+from api_ai_translate.intent import replace
 
 
 def output_file(lintents):
@@ -46,8 +46,15 @@ def input_file(lintents):
     :param lintents: list of all intents
     """
 
-    load = dict()
+    usersays = dict()
     with open(file='usersays.txt', mode='r+', encoding='utf-8') as f:
-        load = json.load(f)
+        usersays = json.load(f)
 
-    return replace_intents(lintents, load)
+    speech = dict()
+    with open(file='speech.txt', mode='r+', encoding='utf-8') as h:
+        speech = json.load(h)
+
+    with open(file='reference.txt', mode='r+', encoding='utf-8') as g:
+        reference = json.load(g)
+
+    return replace(lintents, usersays, speech, reference)

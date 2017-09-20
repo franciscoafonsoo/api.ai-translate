@@ -15,12 +15,11 @@ if __name__ == '__main__':
     if not conf.DEFAULT_INTENTS_PATH:
         raise Exception("Please define an intents path in the user_settings.py file")
 
-    choice = int(input('output(1) or input(2) ?'))
+    choice = int(input('output(1) or input(2) \n'))
 
     if choice == 1:
-        print('Choose to what language you want to translate the agent (en, pt, etc)')
-        # intents = load(conf.DEFAULT_INTENTS_PATH, False)
-        intents = load(conf.DEFAULT_INTENTS_PATH, str(input()))
+        var = 'Choose to what language you want to translate the agent (en, pt, etc) '
+        intents = load(conf.DEFAULT_INTENTS_PATH, str(input(var)))
         output_file(intents)
     elif choice == 2:
         intents = load(conf.DEFAULT_INTENTS_PATH, False)

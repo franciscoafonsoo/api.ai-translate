@@ -56,10 +56,30 @@ class Intent:
         return self.name
 
 
-def replace_intents(lintents, load):
-    for key in load.keys():
-        for intent in lintents:
-            for usersays in intent.usersays:
-                if usersays == key:
-                    intent.usersays[usersays] = load[key]
+def replace(lintents, usersays, speech, reference):
+
+    for intent in lintents:
+        # first iteration (usersays)
+        for key in usersays.keys():
+            for us in intent.usersays:
+                if us == key:
+                    intent.usersays[us] = usersays[key]
+        # second iteration (speech)
+        for key in speech.keys():
+            for sp in intent.speech:
+                if sp == key:
+                    intent.speech[sp] = speech[key]
+        # third iteration (reference)
+        # for key in reference.keys():
+        #     for rf in intent.reference:
+        #         if rf == key:
+        #             intent.reference = reference[key]
+
+    # old code, trying to improve to cycle less
+    # for key in usersays.keys():
+    #     for intent in lintents:
+    #         for usersays in intent.usersays:
+    #             if usersays == key:
+    #                 intent.usersays[usersays] = usersays[key]
+
     return lintents
